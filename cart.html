@@ -1,217 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link rel="icon" href="logo.PNG" type="image/x-icon" />
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Treats By Mimi </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="logo.PNG" type="image/png" />
+  <title>Place Order &amp; Checkout — Treats By Mimi</title>
+  <meta name="description" content="Complete your cake order online or via WhatsApp with Treats By Mimi in Maitama, Abuja." />
+  <link href="css/modern-mimi.css" rel="stylesheet" />
+</head>
+<body>
 
-        <!-- Icon css link -->
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="vendors/linearicons/style.css" rel="stylesheet">
-        <link href="vendors/flat-icon/flaticon.css" rel="stylesheet">
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        
-        <!-- Rev slider css -->
-        <link href="vendors/revolution/css/settings.css" rel="stylesheet">
-        <link href="vendors/revolution/css/layers.css" rel="stylesheet">
-        <link href="vendors/revolution/css/navigation.css" rel="stylesheet">
-        <link href="vendors/animate-css/animate.css" rel="stylesheet">
-        
-        <!-- Extra plugin css -->
-        <link href="vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
-        <link href="vendors/magnifc-popup/magnific-popup.css" rel="stylesheet">
-        <link href="vendors/nice-select/css/nice-select.css" rel="stylesheet">
-        
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/responsive.css" rel="stylesheet">
+  <!-- ================ TOP BAR CONTRACT ================ -->
+  <header class="mimi-header">
+    <div class="mimi-container mimi-header-inner">
+      <a href="index.html" class="mimi-brand">Treats By Mimi</a>
 
-       
-    </head>
-    <body>
-        
-        <!--================Main Header Area =================-->
-		<header class="main_header_area">
-			<div class="top_header_area row m0">
-				<div class="container">
-					<div class="float-left">
-						<a href="tell:+18004567890"><i class="fa fa-phone" aria-hidden="true"></i> +2348170245555 </a>
-						<a href="mainto:info@cakebakery.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> Treatsbyminibakery@gmail.com </a>
-					</div>
-					<div class="float-right">
-						<ul class="h_social list_style">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        							
-							
-						</ul>
-						<ul class="h_search list_style">
-							<li><a href="#"><i class="fa fa-instagram "></i></a></li>
+      <nav class="mimi-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="mimi-nav-link">Home</a>
+        <a href="cake.html" class="mimi-nav-link">Cakes</a>
+        <a href="menu.html" class="mimi-nav-link">Menu &amp; Pricing</a>
+        <a href="service.html" class="mimi-nav-link">Services</a>
+        <a href="about-us.html" class="mimi-nav-link">About</a>
+        <a href="contact.html" class="mimi-nav-link">Contact</a>
+      </nav>
 
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="main_menu_area">
-				<div class="container">
-					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-						<a class="navbar-brand" href="index.html">
-							<img style="height: 2cm; border-radius: 50%;" src="logo.PNG" alt="">
-						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="my_toggle_menu">
-                            	<span></span>
-                            	<span></span>
-                            	<span></span>
-                            </span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav mr-auto">
-								<li class="dropdown submenu">
-									
-								
-									<li><a href="index.html">Home</a></li>
-        							<li><a href="about-us.html">About  Us</a></li>
-									<li><a href="cake.html">Cakes </a></li>
-									<li><a href="service.html">Services </a></li>
-									
-								
-									
-								
-							</ul>
-					
-								<ul class="navbar-nav mr-auto">
-							<li class="dropdown submenu">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   </a>
-							
-								<li><a href="menu.html">Menu</a></li>
-								<li><a href="cart.html">Place Order </a></li>
-							<li><a href="contact.html">Contact Us</a></li>
-						
-								
-								
-								
-							
-						</ul>
+      <div class="mimi-header-actions">
+        <button type="button" class="mimi-bag-btn" onclick="window.mimiOpenCartDrawer()" aria-label="Open shopping bag">
+          <span>Bag</span>
+          <span class="mimi-bag-count js-mimi-bag-count">0</span>
+        </button>
+        <a href="cake.html" class="mimi-btn-secondary">Add More Cakes</a>
+        <button type="button" id="mimiMobileMenuBtn" class="mimi-mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
 
+  <div id="mimiMobileNav" class="mimi-mobile-nav">
+    <ul class="mimi-mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cake.html">Cakes</a></li>
+      <li><a href="menu.html">Menu &amp; Pricing</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="cart.html">Place Order</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
 
+  <main>
+    <section class="mimi-section" id="mimiCheckoutPageContainer">
+      <div class="mimi-container">
+        <div class="mimi-section-header">
+          <div class="mimi-kicker">
+            <span>Direct Patisserie Checkout</span>
+            <span class="mimi-kicker-sep" aria-hidden="true">·</span>
+            <span>28 Usuma Street, Maitama, Abuja</span>
+          </div>
+          <h1 class="mimi-section-title" style="font-size: clamp(2rem, 3.8vw, 2.85rem);">
+            Place Your Cake &amp; Dessert Order
+          </h1>
+          <p class="mimi-section-subtitle">
+            Review your customized cakes below, choose complimentary pickup at our Maitama studio or Abuja doorstep delivery, and confirm your order online or directly via WhatsApp (+234 817 024 5555).
+          </p>
+        </div>
 
+        <!-- Post-Order Confirmation Receipt Container -->
+        <div id="mimiOrderConfirmationBox" style="display: none;"></div>
 
-						</div>
-					</nav>
-				</div>
-			</div>
-		</header>
-        <!--================End Main Header Area =================-->
-        
-  
-        <!--================End Main Header Area =================-->
-        <section class="banner_area">
-        	<div class="container">
-        		<div class="banner_text">
-        			<h3>Place Order </h3>
-        			<ul>
-        				<li><a href="index.html">Home</a></li>
-        				<li><a href="cart.html">Place Order </a></li>
-        			</ul>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Main Header Area =================-->
-        
-        <!--================Special Area =================-->
-        <section class="special_area p_100">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Treats by Mimi is now taking orders via WhatsApp. </h2>
-        			<h5>Send a message to [+234 8170245555].<br>
-						Browse our menu or tell us your cravings.<br>
-						Specify quantities, flavors, and any special requests.<br>
-						Choose your preferred pick-up time or delivery option (if available).<br>
-						We'll confirm your order and send you payment details.<br>
-						Sit back, relax, and await your sweet treat! </h5>
-        		</div>
-        		<div class="special_item_inner">
-        			<div class="specail_item">
-						<div class="row">
-							<div class="col-lg-4">
-								<div class="s_left_img">
-									<img class="img-fluid" src="img/special/special-1.png" alt="">
-								</div>
-							</div>
-							<div class="col-lg-8">
-								<div class="special_item_text">
-									<h4>Call Or A Send Message </h4>
-									
-									<a class="pink_btn" href="https://wa.me/c/2348170245555 ">WhatsApp</a>
-								</div>
-							</div>
-						</div>
-        			</div>
-        			<div class="specail_item">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="s_item_left">
-									<div class="main_title">
-										<h2>Don't forget to:<br>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 36px; align-items: start;" class="mimi-checkout-layout">
+          <style>
+            @media (min-width: 960px) {
+              .mimi-checkout-layout {
+                grid-template-columns: 1.15fr 0.85fr !important;
+              }
+            }
+          </style>
 
-											
-									</div>
-									<ul class="list_style">
-										<li><a href="#"> 
-											Tell us your preferred pick-up location (if applicable).<br>
-											Feel free to ask us any questions about our menu or ingredients.<br>
-											We're excited to make your dessert dreams a reality, one WhatsApp message at a time! </h2></a></li>
-									
-									</ul>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="s_right_img">
-									<img class="img-fluid" src="img/product/product-details-1.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Special Area =================-->
-        
-      
-        
-        
-        
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Rev slider js -->
-        <script src="vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <!-- Extra plugin js -->
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="vendors/magnifc-popup/jquery.magnific-popup.min.js"></script>
-        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="vendors/isotope/isotope.pkgd.min.js"></script>
-        <script src="vendors/datetime-picker/js/moment.min.js"></script>
-        <script src="vendors/datetime-picker/js/bootstrap-datetimepicker.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="vendors/jquery-ui/jquery-ui.min.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        
-        <script src="js/theme.js"></script>
-    </body>
+          <!-- Left Column: Customer Verification & Delivery Details Form -->
+          <form id="mimiCheckoutForm" onsubmit="window.mimiHandleCheckoutSubmit(event)" style="background: var(--bg-card); border: 1px solid var(--border-hairline); border-radius: var(--radius-outer); padding: 28px; display: flex; flex-direction: column; gap: 20px;">
+            <h2 style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
+              1. Customer &amp; Fulfillment Details
+            </h2>
 
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+              <div class="mimi-field-group">
+                <label class="mimi-field-label" for="mimiCustName">Full Name *</label>
+                <input id="mimiCustName" type="text" class="mimi-input" placeholder="e.g. Chidinma Okafor" required />
+              </div>
+              <div class="mimi-field-group">
+                <label class="mimi-field-label" for="mimiCustPhone">Phone / WhatsApp Number *</label>
+                <input id="mimiCustPhone" type="tel" class="mimi-input" placeholder="e.g. +234 803 000 0000" required />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+              <div class="mimi-field-group">
+                <label class="mimi-field-label" for="mimiCheckoutDeliveryMethod">Fulfillment Option</label>
+                <select id="mimiCheckoutDeliveryMethod" class="mimi-select">
+                  <option value="pickup">Studio Pick-up — 28 Usuma St, Maitama (Complimentary)</option>
+                  <option value="delivery">Abuja Doorstep Delivery (+₦3,500)</option>
+                </select>
+              </div>
+              <div class="mimi-field-group">
+                <label class="mimi-field-label" for="mimiCustDate">Preferred Pick-up / Delivery Date &amp; Time</label>
+                <input id="mimiCustDate" type="text" class="mimi-input" placeholder="e.g. Saturday, 2:00 PM" />
+              </div>
+            </div>
+
+            <div class="mimi-field-group">
+              <label class="mimi-field-label" for="mimiCustAddress">Delivery Address in Abuja (If applicable)</label>
+              <input id="mimiCustAddress" type="text" class="mimi-input" placeholder="Street address, district (e.g. Wuse II, Asokoro, Gwarinpa, Maitama)" />
+            </div>
+
+            <div class="mimi-field-group">
+              <label class="mimi-field-label" for="mimiCustNotes">Special Cravings, Color Palette, or Dietary Requests</label>
+              <textarea id="mimiCustNotes" rows="3" class="mimi-textarea" placeholder="Tell us any theme colors, allergy notes, or special instructions..."></textarea>
+            </div>
+
+            <div style="display: grid; gap: 12px; padding-top: 8px;">
+              <button type="submit" class="mimi-btn-primary mimi-btn-lg" style="width: 100%;">
+                Confirm Order &amp; Generate Receipt
+              </button>
+              <button type="button" class="mimi-btn-secondary mimi-btn-lg" style="width: 100%;" onclick="window.mimiOpenWhatsAppDirectFromForm()">
+                Send Itemized Order via WhatsApp (+234 817 024 5555) →
+              </button>
+            </div>
+          </form>
+
+          <!-- Right Column: Itemized Order Bag & Summary -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-hairline); border-radius: var(--radius-outer); padding: 28px;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px; margin-bottom: 20px;">
+              <h2 style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 600;">
+                2. Your Selected Items
+              </h2>
+              <button type="button" class="mimi-flavor-action" onclick="window.mimiOpenConfigurator('divergent')">
+                + Add Custom Cake
+              </button>
+            </div>
+
+            <div id="mimiCheckoutItemsList" style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;"></div>
+
+            <div style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-inner); border: 1px solid var(--border-hairline);">
+              <div class="mimi-summary-row">
+                <span>Items Subtotal</span>
+                <span id="mimiCheckoutSubtotal" class="tabular-nums" style="font-family: var(--font-mono);">₦0</span>
+              </div>
+              <div class="mimi-summary-row">
+                <span>Fulfillment</span>
+                <span id="mimiCheckoutFee" class="tabular-nums">Complimentary (Maitama Pick-up)</span>
+              </div>
+              <div class="mimi-summary-total" style="margin-bottom: 0;">
+                <span>Total Amount</span>
+                <span id="mimiCheckoutTotal" class="tabular-nums" style="font-family: var(--font-mono); color: var(--accent-primary);">₦0</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 20px; font-size: 0.8125rem; color: var(--text-muted); line-height: 1.55;">
+              <strong>How WhatsApp &amp; Studio Ordering Works:</strong><br />
+              1. Configure your cakes above or message <strong>+234 817 024 5555</strong>.<br />
+              2. Specify quantities, flavors, and preferred pick-up or delivery time.<br />
+              3. We confirm your slot immediately from our Maitama kitchen.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mimi-footer">
+    <div class="mimi-container">
+      <div class="mimi-footer-grid">
+        <div>
+          <a href="index.html" class="mimi-footer-brand">Treats By Mimi</a>
+          <p class="mimi-footer-desc">
+            Come visit us today and let us treat you to something sweet and special. Handcrafted celebration cakes, cupcakes, and artisanal pastries in Abuja.
+          </p>
+        </div>
+        <div>
+          <h3 class="mimi-footer-heading">Navigation</h3>
+          <ul class="mimi-footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cake.html">Our Cakes</a></li>
+            <li><a href="menu.html">Menu &amp; Price List</a></li>
+            <li><a href="service.html">Catering &amp; Services</a></li>
+            <li><a href="about-us.html">About Our Bakery</a></li>
+            <li><a href="cart.html">Place Order</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="mimi-footer-heading">Bakery Hours</h3>
+          <ul class="mimi-footer-links">
+            <li>Mon – Fri: 9:00 AM – 8:00 PM</li>
+            <li>Saturday: 9:00 AM – 4:00 PM</li>
+            <li>Sunday: By Pre-Booked Order</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="mimi-footer-heading">Maitama Studio</h3>
+          <ul class="mimi-footer-links">
+            <li>28 Usuma Street, Maitama, Abuja FCT</li>
+            <li><a href="tel:+2348170245555">+234 817 024 5555</a></li>
+            <li><a href="mailto:Treatsbymimibakery@gmail.com">Treatsbymimibakery@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mimi-footer-bottom">
+        <span>© Treats By Mimi Bakery, Abuja. All rights reserved.</span>
+        <a href="cake.html" style="color: #FFFFFF; font-weight: 500;">Browse All Cakes →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/mimi-store.js"></script>
+</body>
 </html>

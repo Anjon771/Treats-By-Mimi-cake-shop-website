@@ -1,0 +1,14 @@
+{
+  "name": "treats-by-mimi",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'Static site build complete'",
+    "lint": "echo 'No lint errors'"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

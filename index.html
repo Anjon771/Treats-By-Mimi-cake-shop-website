@@ -1,914 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link rel="icon" href="logo.PNG" type="image/x-icon" />
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Treats By Mimi </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="logo.PNG" type="image/png" />
+  <title>Treats By Mimi</title>
+  <meta name="description" content="Affordable and delicious family-owned dessert shop and cake bakery in Abuja, Nigeria." />
+  <meta property="og:title" content="Treats By Mimi" />
+  <meta property="og:description" content="Affordable and delicious family-owned dessert shop and cake bakery in Abuja, Nigeria." />
+  <link href="css/modern-mimi.css" rel="stylesheet" />
+</head>
+<body>
 
-        <!-- Icon css link -->
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="vendors/linearicons/style.css" rel="stylesheet">
-        <link href="vendors/flat-icon/flaticon.css" rel="stylesheet">
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        
-        <!-- Rev slider css -->
-        <link href="vendors/revolution/css/settings.css" rel="stylesheet">
-        <link href="vendors/revolution/css/layers.css" rel="stylesheet">
-        <link href="vendors/revolution/css/navigation.css" rel="stylesheet">
-        <link href="vendors/animate-css/animate.css" rel="stylesheet">
-        
-        <!-- Extra plugin css -->
-        <link href="vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
-        <link href="vendors/magnifc-popup/magnific-popup.css" rel="stylesheet">
-        <link href="vendors/nice-select/css/nice-select.css" rel="stylesheet">
-        
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/responsive.css" rel="stylesheet">
+  <!-- ================ TOP BAR CONTRACT (1 Row, 3 Zones) ================ -->
+  <header class="mimi-header">
+    <div class="mimi-container mimi-header-inner">
+      <!-- Zone 1: Single Text Element Wordmark -->
+      <a href="index.html" class="mimi-brand">Treats By Mimi</a>
 
-       
-    </head>
-    <body>
-        
-        <!--================Main Header Area =================-->
-		<header class="main_header_area five_header">
-			<div class="top_header_area row m0">
-				<div class="container">
-					<div class="float-left">
-						<a href="tell:+08170245555"><i class="fa fa-phone" aria-hidden="true"></i> 08170245555</a>
-						<a href="mainto:Treatsbymimibakery@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> Treatsbymimibakery@gmail.com</a>
-					</div>
-					<div class="float-right">
-						<ul class="h_social list_style">
+      <!-- Zone 2: 6 Clean Text Navigation Links -->
+      <nav class="mimi-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="mimi-nav-link active">Home</a>
+        <a href="cake.html" class="mimi-nav-link">Cakes</a>
+        <a href="menu.html" class="mimi-nav-link">Menu &amp; Pricing</a>
+        <a href="service.html" class="mimi-nav-link">Services</a>
+        <a href="about-us.html" class="mimi-nav-link">About</a>
+        <a href="contact.html" class="mimi-nav-link">Contact</a>
+      </nav>
 
-							
-						</ul>
-						<ul class="h_search list_style">
+      <!-- Zone 3: 2 Primary Actions -->
+      <div class="mimi-header-actions">
+        <button type="button" class="mimi-bag-btn" onclick="window.mimiOpenCartDrawer()" aria-label="Open shopping bag">
+          <span>Bag</span>
+          <span class="mimi-bag-count js-mimi-bag-count">0</span>
+        </button>
+        <a href="cart.html" class="mimi-btn-primary">Place Order</a>
+        <button type="button" id="mimiMobileMenuBtn" class="mimi-mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
 
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="main_menu_two">
-				<div class="container">
-					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-						<a class="navbar-brand" href="index.html"><img style="height: 1.5cm; width: 2.5cm ; border-radius: 50%;"   src="logo.PNG" alt=""></a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="my_toggle_menu">
-                            	<span></span>
-                            	<span></span>
-                            	<span></span>
-                            </span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav justify-content-end">
-								<li class="dropdown submenu active">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-									
-									<li><a href="about-us.html">About  Us</a></li>
-									<li><a href="cake.html">Cakes </a></li>
-									<li><a href="service.html">Services </a></li>
-									<li><a href="menu.html">Menu</a></li>
-									<li><a href="cart.html">Place Order </a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-							</ul>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</header>
-        <!--================End Main Header Area =================-->
-        
-        <!--================Slider Area =================-->
-        <section class="main_slider_area">
-            <div id="main_slider5" class="rev_slider" data-version="5.3.1.6">
-                <ul>
-                    <li data-index="rs-1587" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="img/home-slider/slider-14.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="img/home-slider/slider-14.jpg"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+  <!-- Mobile Navigation Drawer -->
+  <div id="mimiMobileNav" class="mimi-mobile-nav">
+    <ul class="mimi-mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cake.html">Cakes</a></li>
+      <li><a href="menu.html">Menu &amp; Pricing</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="cart.html">Place Order</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
 
-                        <!-- LAYER NR. 1 -->
-                        <div class="slider_text_box">
-                            <div class="tp-caption tp-resizeme price" 
-                            data-x="['left','left','left','15','15','15']" data-hoffset="['300','300','15','15','15','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['120','120','70','70','115','130']" 
-                            data-fontsize="['60','60','60','40','30']"
-                            data-lineheight="['76','76','76','50','40']"
-                            data-width="['780','780','780','400']"
-                            data-height="none"
-                            data-whitespace="normal"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                          data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left']"><h3>N4,000</h3></div>
-                            
-                            <div class="tp-caption tp-resizeme first_text" 
-                            data-x="['right','right','left','15','15','15']" data-hoffset="['-150','0','15','15','15','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['155','155','155','155','235','230']" 
-                            data-fontsize="['60','60','60','40','30']"
-                            data-lineheight="['76','76','76','50','40']"
-                            data-width="['780','740','780','780','700','400']"
-                            data-height="none"
-                            data-whitespace="normal"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left']"> Dessert Shop  <br />with  Quality Cakes ... </div>
-                            
-                            <div class="tp-caption tp-resizeme secand_text" 
-                                data-x="['right','right','left','15','15','15']" 
-                                data-hoffset="['0','110','15','15','15','0']" 
-                                data-y="['top','top','top','top']" data-voffset="['316','316','316','270','330','320']"  
-                                data-fontsize="['20','20','20','20','16']"
-                                data-lineheight="['28','28','28','28']"
-                                data-width="['620','620','620','620','500','380']"
-                                data-height="none"
-                                data-whitespace="normal"
-                                data-type="text" 
-                                data-responsive_offset="on"
-                                data-transform_idle="o:1;"
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">Affordable and delicious  Treats by Mimi is a family-owned dessert shop in Abuja, Nigeria. We are passionate about creating delicious and affordable desserts that will make your taste buds sing.
-                            </div>
-                            
-                            <div class="tp-caption tp-resizeme slider_button" 
-                                data-x="['right','right','left','15','15','15']" data-hoffset="['0','0','15','0','0','0']" 
-                                data-y="['top','top','top','top']" data-voffset="['405','405','405','355','400','415']" 
-                                data-fontsize="['14','14','14','14']"
-                                data-lineheight="['46','46','46','46']"
-                                data-width="['620','740','620','620','300']"
-                                data-height="none"
-                                data-whitespace="normal"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="main_btn" href="cake.html">Purchase now</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-index="rs-1588" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="img/home-slider/slider-13.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="img/home-slider/slider-13.jpg"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-                        <!-- LAYERS -->
-
-                        <!-- LAYER NR. 1 -->
-                        <div class="slider_text_box">
-                           
-                           <div class="tp-caption tp-resizeme price" 
-                            data-x="['left','left','left','15','15','15']" data-hoffset="['300','300','15','15','15','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['120','120','70','70','115','130']" 
-                            data-fontsize="['60','60','60','40','30']"
-                            data-lineheight="['76','76','76','50','40']"
-                            data-width="['780','780','780','400']"
-                            data-height="none"
-                            data-whitespace="normal"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left']"><h3>N4,000</h3></div>
-                           
-                            <div class="tp-caption tp-resizeme first_text" 
-                            data-x="['right','right','left','15','15','15']" data-hoffset="['-150','0','15','15','15','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['155','155','155','155','235','230']" 
-                            data-fontsize="['60','60','60','40','30']"
-                            data-lineheight="['76','76','76','50','40']"
-                            data-width="['780','740','780','780','700','400']"
-                            data-height="none"
-                            data-whitespace="normal"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left']">Cake Bakery ... <br /> making  delicious products</div>
-                            
-                            <div class="tp-caption tp-resizeme secand_text" 
-                                data-x="['right','right','left','15','15','15']" 
-                                data-hoffset="['0','110','15','15','15','0']" 
-                                data-y="['top','top','top','top']" data-voffset="['316','316','316','270','330','320']"  
-                                data-fontsize="['20','20','20','20','16']"
-                                data-lineheight="['28','28','28','28']"
-                                data-width="['620','620','620','620','500','380']"
-                                data-height="none"
-                                data-whitespace="normal"
-                                data-type="text" 
-                                data-responsive_offset="on"
-                                data-transform_idle="o:1;"
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">Our team of experienced bakers uses only the freshest and highest quality ingredients to create our delectable treats.
-                            </div>
-                            
-                            <div class="tp-caption tp-resizeme slider_button" 
-                                data-x="['right','right','left','15','15','15']" data-hoffset="['0','0','15','0','0','0']" 
-                                data-y="['top','top','top','top']" data-voffset="['405','405','405','355','400','415']" 
-                                data-fontsize="['14','14','14','14']"
-                                data-lineheight="['46','46','46','46']"
-                                data-width="['620','740','620','620','300']"
-                                data-height="none"
-                                data-whitespace="normal"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="main_btn" href="cake.html">Purchase now</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-index="rs-1589" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="img/home-slider/slider-14.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="img/home-slider/slider-14.jpg"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-                        <!-- LAYERS -->
-
-                        <!-- LAYER NR. 1 -->
-                        <div class="slider_text_box">
-                           
-                           <div class="tp-caption tp-resizeme price" 
-                            data-x="['left','left','left','15','15','15']" data-hoffset="['300','300','15','15','15','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['120','120','70','70','115','130']" 
-                            data-fontsize="['60','60','60','40','30']"
-                            data-lineheight="['76','76','76','50','40']"
-                            data-width="['780','780','780','400']"
-                            data-height="none"
-                            data-whitespace="normal"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left']"><h3>N6,000</h3></div>
-                           
-                            <div class="tp-caption tp-resizeme first_text" 
-                            data-x="['right','right','left','15','15','15']" data-hoffset="['-150','0','15','15','15','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['155','155','155','155','235','230']" 
-                            data-fontsize="['60','60','60','40','30']"
-                            data-lineheight="['76','76','76','50','40']"
-                            data-width="['780','740','780','780','700','400']"
-                            data-height="none"
-                            data-whitespace="normal"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left']">Cake themes ... <br /> made with care and love</div>
-                            
-                            <div class="tp-caption tp-resizeme secand_text" 
-                                data-x="['right','right','left','15','15','15']" 
-                                data-hoffset="['0','110','15','15','15','0']" 
-                                data-y="['top','top','top','top']" data-voffset="['316','316','316','270','330','320']"  
-                                data-fontsize="['20','20','20','20','16']"
-                                data-lineheight="['28','28','28','28']"
-                                data-width="['620','620','620','620','500','380']"
-                                data-height="none"
-                                data-whitespace="normal"
-                                data-type="text" 
-                                data-responsive_offset="on"
-                                data-transform_idle="o:1;"
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"> We also offer custom cakes for any occasion, from birthdays to weddings
-
-
-                            </div>
-                            
-                            <div class="tp-caption tp-resizeme slider_button" 
-                                data-x="['right','right','left','15','15','15']" data-hoffset="['0','0','15','0','0','0']" 
-                                data-y="['top','top','top','top']" data-voffset="['405','405','405','355','400','415']" 
-                                data-fontsize="['14','14','14','14']"
-                                data-lineheight="['46','46','46','46']"
-                                data-width="['620','740','620','620','300']"
-                                data-height="none"
-                                data-whitespace="normal"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="main_btn" href="cake.html">Purchase now</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+  <main>
+    <!-- ================ SECTION 1: STOREFRONT HERO ================ -->
+    <section class="mimi-hero">
+      <div class="mimi-container">
+        <div class="mimi-hero-grid">
+          <!-- Left Column: Editorial Value Proposition & Quantitative Proof -->
+          <div>
+            <div class="mimi-kicker">
+              <span>Family-Owned Patisserie</span>
+              <span class="mimi-kicker-sep" aria-hidden="true">·</span>
+              <span>28 Usuma Street, Maitama, Abuja</span>
+              <span class="mimi-kicker-sep" aria-hidden="true">·</span>
+              <span>Freshly Baked Daily</span>
             </div>
-        </section>
-        <!--================End Slider Area =================-->
-        
-        
-        
-        <!--================Welcome Area =================-->
-        <section class="welcome_bakery_area pink_cake_feature">
-        	<div class="container">
-        		<div class="cake_feature_inner">
-      				<div class="title_view_all">
-						<div class="float-left">
-							<div class="main_w_title">
-								<h2>Our Featured Cakes</h2>
-								<h5>Best Couture Cakes In Abuja </h5>
-							</div>
-						</div>
-						<div class="float-right">
-							<a class="pest_btn" href="cake.html">View all Products</a>
-						</div>
-					</div>
-       				<div class="cake_feature_slider owl-carousel">
-       					<div class="item">
-       						<div class="cake_feature_item">
-       							<div class="cake_img">
-       								<img src="p2.PNG" alt="">
-       							</div>
-       							<div class="cake_text">
-       								<h4>N53k</h4>
-       								<h3>Divergent </h3>
-       								<a class="pest_btn" href="cart.html">Add to cart</a>
-       							</div>
-       						</div>
-       					</div>
-       					<div class="item">
-       						<div class="cake_feature_item">
-       							<div class="cake_img">
-       								<img src="p12.PNG" alt="">
-       							</div>
-       							<div class="cake_text">
-       								<h4>N68K</h4>
-       								<h3>Colour Bomb </h3>
-       								<a class="pest_btn" href="cart.html">Add to cart</a>
-       							</div>
-       						</div>
-       					</div>
-       					<div class="item">
-       						<div class="cake_feature_item">
-       							<div class="cake_img">
-       								<img src="p8.PNG" alt="">
-       							</div>
-       							<div class="cake_text">
-       								<h4>N68K</h4>
-       								<h3>Royalty  </h3>
-       								<a class="pest_btn" href="cart.html">Add to cart</a>
-       							</div>
-       						</div>
-       					</div>
-       					<div class="item">
-       						<div class="cake_feature_item">
-       							<div class="cake_img">
-       								<img src="p9.PNG" alt="">
-       							</div>
-       							<div class="cake_text">
-       								<h4>N68k </h4>
-       								<h3>Swiss Blue </h3>
-       								<a class="pest_btn" href="cart.html">Add to cart</a>
-       							</div>
-       						</div>
-       					</div>
-       				</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Welcome Area =================-->
-        
-        <!--================Special Recipe Area =================-->
-        <section class="special_recipe_area">
-        	<div class="container">
-        		<div class="special_recipe_slider owl-carousel">
-        			<div class="item">
-        				<div class="media">
-        					<div class="d-flex">
-        						<img src="img/recipe/recipe-1.png" alt="">
-        					</div>
-        					<div class="media-body">
-        						<h4>Planning a party or event </h4>
-        						<p> Ovenly Delights is your one-stop shop for delicious and stress-free catering. We offer a variety of catering packages to suit your needs, from intimate gatherings to large celebrations. We'll work with you to create a custom menu that will wow your guests and leave them wanting more.   </p>
-        						<a class="w_view_btn" href="service.html">View Details</a>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="item">
-        				<div class="media">
-        					<div class="d-flex">
-        						<img src="img/recipe/recipe-1.png" alt="">
-        					</div>
-        					<div class="media-body">
-        						<h4>A Menu Made for Moments </h4>
-        						<p> Our delectable menu goes beyond just cookies and cakes. We offer a variety of freshly baked breads, pastries, and savory treats perfect for any occasion. From flaky croissants and muffins for breakfast to quiche and tarts for lunch, we have something to tantalize your taste buds all day long. </p>
-        						<a class="w_view_btn" href="service.html">View Details</a>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="item">
-        				<div class="media">
-        					<div class="d-flex">
-        						<img src="img/recipe/recipe-1.png" alt="">
-        					</div>
-        					<div class="media-body">
-        						<h4>Sweet Treats Delivered to Your Door  </h4>
-        						<p> We offer convenient delivery right to your doorstep, so you can enjoy our treats fresh from the oven. Whether it's a surprise cookie box for a loved one or a full dessert spread for your next party, we'll make sure it arrives safely and deliciously.  </p>
-        						<a class="w_view_btn" href="service.html">View Details</a>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="item">
-        				<div class="media">
-        					<div class="d-flex">
-        						<img src="img/recipe/recipe-1.png" alt="">
-        					</div>
-        					<div class="media-body">
-        						<h4>Wedding Cakes: The Sweetest Start to Your Forever </h4>
-        						<p>Your dream wedding cake awaits at Ovenly Delights! We work closely with you to design a cake that reflects your love story, from traditional tiered masterpieces to modern naked cakes adorned with fresh fruit. We also offer a variety of flavors, fillings, and frostings to ensure your cake is as delicious as it is beautiful.  </p>
-        						<a class="w_view_btn" href="service.html">View Details</a>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Special Recipe Area =================-->
-        
-        <!--================End Client Says Area =================-->
-        
-        
-        <!--================New Arivals Area =================-->
-        <section class="new_arivals_area p_100">
-        	<div class="container">
-        		<div class="single_pest_title">
-					<h2>Events Specials </h2>
-				</div>
-        		<div class="row arivals_inner">
-        			<div class="col-lg-6 col-sm-7">
-        				<div class="arivals_chocolate">
-        					<div class="arivals_pic">
-        						<img class="img-fluid" src="p18.PNG" alt="">
-        						<div class="price_text">
-        							<h5>N53k</h5>
-        						</div>
-        					</div>
-        					<div class="arivals_text">
-        						<h4>Midnight  <span>Blue </span></h4>
-        						<a href="#"></a>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-6">
-        				<div class="arivals_slider owl-carousel">
-        					<div class="item">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="p13.PNG" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>N53k </h4>
-										<h3>Golden Hour </h3>
-										<a class="pest_btn" href="cart.html">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="item">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="p11.PNG" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>N53k </h4>
-										<h3>Nobel </h3>
-										<a class="pest_btn" href="cart.html">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="item">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="p16.PNG" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>N60k</h4>
-										<h3>Waves </h3>
-										<a class="pest_btn" href="cart.html">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="item">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="p15.PNG" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>N57k </h4>
-										<h3>Blues </h3>
-										<a class="pest_btn" href="cart.html">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End New Arivals Area =================-->
-             
-        <!--================Discover Menu Area =================-->
-        <section class="discover_menu_area service_menu">
-        	<div class="discover_menu_inner">
-        		<div class="container">
-        			<div class="s_dis_title">
-        				<div class="float-left">
-        					<div class="main_title">
-								<h2>Various Flavors</h2>
-								<h5></h5>
-							</div>
-        				</div>
-        				<div class="float-right">
-        					<a class="pest_w_btn" href="https://www.instagram.com/p/CztD2gXItpu/?img_index=1 ">View Full Menu </a>
-        				</div>
-        			</div>
-       				<div class="row">
-       					<div class="col-lg-6">
-       						<div class="discover_item_inner">
-       							<div class="discover_item">
-									<h4>Vanilla </h4>
-									<p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
-								</div>
-       							<div class="discover_item">
-									<h4>Red Velvet </h4>
-									<p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
-								</div>
-       							<div class="discover_item">
-									<h4> Nutmeg </h4>
-									<p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
-								</div>
-       							<div class="discover_item">
-									<h4>Lemon </h4>
-									<p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
-								</div>
-       						</div>
-       					</div>
-       					<div class="col-lg-6">
-       						<div class="discover_item_inner">
-       							<div class="discover_item">
-									<h4>Orea</h4>
-									<p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
-								</div>
-       							<div class="discover_item">
-									<h4>Coffee</h4>
-									<p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
-								</div>
-       							<div class="discover_item">
-									<h4>Blueberry </h4>
-									<p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
-								</div>
-       							<div class="discover_item">
-									<h4> Coconut </h4>
-									<p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
-								</div>
-       						</div>
-       					</div>
-       				</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Discover Menu Area =================-->
-        <!--================Client Says Area =================-->
-        <section class="client_says_area p_100">
-        	<div class="container">
-        		<div class="client_says_inner">
-        			<div class="c_says_title">
-        				<h2>What Our Client Says</h2>
-        			</div>
-        			<div class="client_says_slider owl-carousel">
-        				<div class="item">
-        					<div class="media">
-        						<div class="d-flex">
-        							
-        							<h3>“</h3>
-        						</div>
-        						<div class="media-body">
-        							<p>So in love with the cupcakes the taste was really something to write home about .</p>
-        							<h5>- Kelly </h5>
-        						</div>
-        					</div>
-        				</div>
-        				<div class="item">
-        					<div class="media">
-        						<div class="d-flex">
-        							
-        						</div>
-        						<div class="media-body">
-        							<p>They really came throuhg for my birthday party with the stawberry covered cake will mostly likely use them next year again .</p>
-        							<h5>- Anna </h5>
-        						</div>
-        					</div>
-        				</div>
-        				<div class="item">
-        					<div class="media">
-        						<div class="d-flex">
-        							
-        						</div>
-        						<div class="media-body">
-        							<p>My go to cake shop in abuja i stop through  for the donuts and browines </p>
-        							<h5>- Ebuka </h5>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Client Says Area =================-->
-          <!--================Our Mission Area =================-->
-		  <section class="our_mission_area p_100">
-        	<div class="container">
-        		<div class="row our_mission_inner">
-        			<div class="col-lg-3">
-        				<div class="single_m_title">
-        					<h2>Our Mission</h2>
-        				</div>
-        			</div>
-        			<div class="col-lg-9">
-        				<div class="mission_inner_text">
-        					<h6> At Treats by Mimi, we believe that life's sweetest moments deserve a touch of magic. We're not just bakers; we're architects of joy, crafting delectable treats that spark smiles, fuel laughter, and forge lasting memories. </h6><br>
-        					<p> To celebrate life's milestones, big and small: From birthday candles flickering on frosted masterpieces to the shared joy of a warm croissant on a Sunday morning, we're here to make every occasion a little sweeter.<br><br>
-								To nurture a community of kindness: Our bakery is more than just a counter and a display case; it's a haven for shared laughter, warm connections, and the simple pleasure of sharing a treat with loved ones.<br><br>
-								To inspire through creativity: We're constantly pushing boundaries, experimenting with flavors and textures, to bring you innovative delights that awaken your taste buds and leave you wanting more.<br><br>
-								To bake with a conscience: We believe in using the finest, locally sourced ingredients, treated with respect and sustainability in mind. Every bite is not just delicious, it's a reflection of our commitment to the earth and our community.<br><br>
-								Treats by Mimi isn't just a bakery; it's a promise to sweeten your life, one delicious bite at a time. We invite you to step into our haven, explore our world of handcrafted delights, and let us be a part of your sweetest moments.</p>
-        					<ul class="nav">
-        						<li><a href="#">Custom cakes</a></li>
-        						<li><a href="#">Birthday cakes</a></li>
-        						<li><a href="#">Wedding cakes</a></li>
-        						<li><a href="#">Thank you Cakes </a></li>
-        					</ul>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Our Mission Area =================-->
-        <!--================Recipe Menu list Area =================-->
-        <section class="price_list_area p_100">
-        	<div class="container">
-        		<div class="price_list_inner">
-        			<div class="single_pest_title">
-        				<h2>Our Price List</h2>
-						<div class="col-lg-6">
-        					<div class="welcome_img">
-        						<img class="img-fluid" src="m1.PNG" alt="">
-								<img class="img-fluid" src="m2.PNG" alt="">
-								<img class="img-fluid" src="m3.PNG" alt="">
-								<img class="img-fluid" src="m4.PNG" alt="">
 
+            <h1 class="mimi-hero-title">
+              Handcrafted Couture Cakes &amp; <em>Artisanal Desserts</em> in Abuja
+            </h1>
 
+            <p class="mimi-hero-lead">
+              Treats by Mimi is a family-owned dessert house in Maitama, Abuja. Our bakers craft celebration cakes, wedding centerpieces, and everyday pastry boxes using locally sourced ingredients and silky Swiss meringue buttercream.
+            </p>
 
-        					</div>
+            <div class="mimi-hero-cta-group">
+              <a href="cake.html" class="mimi-btn-primary mimi-btn-lg">Explore Cake Collection</a>
+              <button type="button" id="mimiHeroCustomizeBtn" class="mimi-btn-secondary mimi-btn-lg" onclick="window.mimiOpenConfigurator('divergent')">
+                Customize a Cake
+              </button>
+            </div>
 
+            <div class="mimi-hero-proof">
+              <div>
+                <div class="mimi-proof-stat-value tabular-nums">₦4,000 – ₦100k</div>
+                <div class="mimi-proof-stat-label">From everyday dessert boxes to 10" tiered couture cakes</div>
+              </div>
+              <div>
+                <div class="mimi-proof-stat-value tabular-nums">8 Signature</div>
+                <div class="mimi-proof-stat-label">Sponge &amp; filling flavors baked fresh to order</div>
+              </div>
+              <div>
+                <div class="mimi-proof-stat-value tabular-nums">Maitama FCT</div>
+                <div class="mimi-proof-stat-label">Complimentary studio pickup &amp; Abuja doorstep delivery</div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Right Column: Interactive Hero Showcase Stage -->
+          <div class="mimi-hero-stage">
+            <div class="mimi-hero-main-img-wrap">
+              <img
+                id="mimiHeroMainImg"
+                src="/src/assets/images/cake_divergent_couture_1790760015934.jpg"
+                alt="Divergent Couture Cake by Treats By Mimi"
+                referrerpolicy="no-referrer"
+                onerror="window.handleMimiImgError(this, 'Divergent Couture')"
+              />
+              <div class="mimi-hero-scrim-caption">
+                <div>
+                  <div id="mimiHeroCaptionMeta" class="mimi-hero-caption-meta">Signature Couture · 6–10" Tiers · Buttercream &amp; Gold Leaf</div>
+                  <div id="mimiHeroCaptionTitle" class="mimi-hero-caption-title">Divergent Couture</div>
+                </div>
+                <div id="mimiHeroCaptionPrice" class="mimi-hero-caption-price tabular-nums">₦53,000</div>
+              </div>
+            </div>
 
+            <div class="mimi-hero-thumbs" role="group" aria-label="Featured Hero Cakes">
+              <button type="button" class="mimi-hero-thumb-btn active" onclick="window.mimiSelectHeroSlide('divergent', this)">
+                <img src="/src/assets/images/cake_divergent_couture_1790760015934.jpg" alt="Divergent Couture" referrerpolicy="no-referrer" onerror="window.handleMimiImgError(this, 'Divergent')" />
+                <div class="mimi-hero-thumb-info">
+                  <div class="mimi-hero-thumb-name">Divergent</div>
+                  <div class="mimi-hero-thumb-price tabular-nums">₦53,000</div>
+                </div>
+              </button>
+              <button type="button" class="mimi-hero-thumb-btn" onclick="window.mimiSelectHeroSlide('colour-bomb', this)">
+                <img src="/src/assets/images/cake_colour_bomb_1790760031830.jpg" alt="Colour Bomb" referrerpolicy="no-referrer" onerror="window.handleMimiImgError(this, 'Colour Bomb')" />
+                <div class="mimi-hero-thumb-info">
+                  <div class="mimi-hero-thumb-name">Colour Bomb</div>
+                  <div class="mimi-hero-thumb-price tabular-nums">₦68,000</div>
+                </div>
+              </button>
+              <button type="button" class="mimi-hero-thumb-btn" onclick="window.mimiSelectHeroSlide('royalty', this)">
+                <img src="/src/assets/images/cake_royalty_tier_1790760048169.jpg" alt="Royalty Crown Tier" referrerpolicy="no-referrer" onerror="window.handleMimiImgError(this, 'Royalty')" />
+                <div class="mimi-hero-thumb-info">
+                  <div class="mimi-hero-thumb-name">Royalty</div>
+                  <div class="mimi-hero-thumb-price tabular-nums">₦68,000</div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ================ SECTION 2: FEATURED COLLECTION GRID ================ -->
+    <section class="mimi-section" id="featured-cakes">
+      <div class="mimi-container">
+        <div class="mimi-section-header mimi-section-header-row">
+          <div>
+            <div class="mimi-kicker">
+              <span>01. Curated Patisserie Catalog</span>
+              <span class="mimi-kicker-sep" aria-hidden="true">·</span>
+              <span>Best Couture Cakes in Abuja</span>
+            </div>
+            <h2 class="mimi-section-title">Featured Celebration &amp; Event Cakes</h2>
+            <p class="mimi-section-subtitle">
+              Select a cake to customize your sponge flavor, guest tier height, and personalized buttercream inscription, or add directly to your bag.
+            </p>
+          </div>
+          <div>
+            <a href="cake.html" class="mimi-btn-secondary">View All 18+ Cakes →</a>
+          </div>
+        </div>
 
+        <!-- Interactive Filter Controls & Search -->
+        <div class="mimi-Controls-bar">
+          <div class="mimi-filter-tabs" role="tablist" aria-label="Filter cakes by collection">
+            <button type="button" class="mimi-filter-tab js-mimi-filter-tab active" data-category="all" onclick="window.mimiSetCategory('all')">
+              All Collections
+            </button>
+            <button type="button" class="mimi-filter-tab js-mimi-filter-tab" data-category="signature" onclick="window.mimiSetCategory('signature')">
+              Signature Couture
+            </button>
+            <button type="button" class="mimi-filter-tab js-mimi-filter-tab" data-category="events" onclick="window.mimiSetCategory('events')">
+              Events Specials
+            </button>
+            <button type="button" class="mimi-filter-tab js-mimi-filter-tab" data-category="holiday" onclick="window.mimiSetCategory('holiday')">
+              Christmas &amp; Holiday
+            </button>
+            <button type="button" class="mimi-filter-tab js-mimi-filter-tab" data-category="treats" onclick="window.mimiSetCategory('treats')">
+              Everyday Treats
+            </button>
+          </div>
 
-        			
-						</div>
-					</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Main Header Area =================-->
-        <!--================New Arivals Area =================-->
-        <section class="new_arivals_area p_100">
-        	<div class="container">
-        		<div class="single_pest_title">
-					<h2> Christmas-themed flavored cakes </h2>
-				</div>
-        		<div class="row arivals_inner">
-        			<div class="col-lg-6 col-sm-7">
-        				<div class="arivals_chocolate">
-        					<div class="arivals_pic">
-        						<img class="img-fluid" src="c3.PNG" alt="">
-        						<div class="price_text">
-        							<h5>N73k</h5>
-        						</div>
-        					</div>
-        					<div class="arivals_text">
-        						<h4> Christmas cakes</span></h4>
-        						<a href="#"></a>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-6">
-        				<div class="arivals_slider owl-carousel">
-        					<div class="item">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="c1.PNG" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>N67k </h4>
-										<h3> Christmas cakes</h3>
-										<a class="pest_btn" href="cart.html">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="item">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="c2.PNG" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>N80k </h4>
-										<h3>Christmas cakes </h3>
-										<a class="pest_btn" href="cart.html">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="item">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="c3.PNG" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>N260k</h4>
-										<h3>Christmas cakes </h3>
-										<a class="pest_btn" href="cart.html">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="item">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="c1.PNG" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>N67k </h4>
-										<h3> Christmas cakes </h3>
-										<a class="pest_btn" href="cart.html">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End New Arivals Area =================-->
-        
-        <!--================Special Area =================-->
-        <section class="special_area p_100">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Treats by Mimi is now taking orders via WhatsApp. </h2>
-        			<h5>Send a message to [+234 8170245555].<br>
-						Browse our menu or tell us your cravings.<br>
-						Specify quantities, flavors, and any special requests.<br>
-						Choose your preferred pick-up time or delivery option (if available).<br>
-						We'll confirm your order and send you payment details.<br>
-						Sit back, relax, and await your sweet treat! </h5>
-        		</div>
-        		<div class="special_item_inner">
-        			<div class="specail_item">
-						<div class="row">
-							<div class="col-lg-4">
-								<div class="s_left_img">
-									<img class="img-fluid" src="img/special/special-1.png" alt="">
-								</div>
-							</div>
-							<div class="col-lg-8">
-								<div class="special_item_text">
-									<h4>Call Or A Send Message </h4>
-									<p></p>
-									<a class="pink_btn" href="https://wa.me/c/2348170245555 ">WhatsApp</a>
-								</div>
-							</div>
-						</div>
-        			</div>
-        			<div class="specail_item">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="s_item_left">
-									<div class="main_title">
-										<h2>Don't forget to:<br>
+          <div class="mimi-search-wrap">
+            <input
+              id="mimiCatalogSearch"
+              type="search"
+              class="mimi-search-input"
+              placeholder="Search cakes (e.g. Royalty, Blue, Noel)..."
+              aria-label="Search cakes"
+            />
+          </div>
+        </div>
 
-											
-									</div>
-									<ul class="list_style">
-										<li><a href="#"> 
-											Tell us your preferred pick-up location (if applicable).<br>
-											Feel free to ask us any questions about our menu or ingredients.<br>
-											We're excited to make your dessert dreams a reality, one WhatsApp message at a time! </h2></a></li>
-									
-									</ul>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="s_right_img">
-									<img class="img-fluid" src="img/product/product-details-1.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Special Area =================-->
-        
-      
-        
-        <!--================Footer Area =================-->
-        <footer class="footer_area">
-        	<div class="footer_widgets">
-        		<div class="container">
-        			<div class="row footer_wd_inner">
-        				<div class="col-lg-3 col-6">
-        					<aside class="f_widget f_about_widget">
-        						<img style="height: 2cm; border-radius: 10%;" src="logo.PNG" alt="">
-        						<p>  Come visit us today and let us treat you to something sweet and special. We can't wait to share our passion for baking with you  </p>
-        						<ul class="nav">
-        							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        							<li><a href="#"><i class="fa fa-instagram "></i></a></li>
-        						
-        						</ul>
-        					</aside>
-        				</div>
-        				<div class="col-lg-3 col-6">
-        					<aside class="f_widget f_link_widget">
-        						<div class="f_title">
-        							<h3>Quick links</h3>
-        						</div>
-        						<ul class="list_style">
-        							<li><a href="index.html">Home </a></li>
-        							<li><a href="about-us.html">About</a></li>
-        							<li><a href="cake.html">Cakes </a></li>
-        							<li><a href="service.html">Services </a></li>
-									<li><a href="cart.html">Place Order </a></li>
-        							<li><a href="contact.html">Contact  </a></li>
-        						</ul>
-        					</aside>
-        				</div>
-        				<div class="col-lg-3 col-6">
-        					<aside class="f_widget f_link_widget">
-        						<div class="f_title">
-        							<h3>Work Times</h3>
-        						</div>
-        						<ul class="list_style">
-        							<li><a href="#">Mon. :  Fri.: 9 am - 8 pm</a></li>
-        							<li><a href="#">Sat. : 9am - 4pm</a></li>
-        							<li><a href="#">Sun. : Closed</a></li>
-        						</ul>
-        					</aside>
-        				</div>
-        				<div class="col-lg-3 col-6">
-        					<aside class="f_widget f_contact_widget">
-        						<div class="f_title">
-        							<h3>Contact Info</h3>
-        						</div>
-        						<h4>+2348170245555</h4>
-        						<p>28 Usuma Street  Maitama Abuja Fct</p>
-        						<h5>Treatsbyminibakery@gmail.com</h5>
-        					</aside>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="footer_copyright">
-        		<div class="container">
-        			<div class="copyright_inner">
-        				<div class="float-left">
-        					<h5><a target="_blank" href=""></a></h5>
-        				</div>
-        				<div class="float-right">
-        					<a href="cart.html">Purchase Now</a>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </footer>
-        <!--================End Footer Area =================-->
-        
-      
-        
-        
-        
-        
-        
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Rev slider js -->
-        <script src="vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <!-- Extra plugin js -->
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="vendors/magnifc-popup/jquery.magnific-popup.min.js"></script>
-        <script src="vendors/datetime-picker/js/moment.min.js"></script>
-        <script src="vendors/datetime-picker/js/bootstrap-datetimepicker.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="vendors/jquery-ui/jquery-ui.min.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        
-        <script src="js/theme.js"></script>
-    </body>
+        <!-- 3-Column Product Grid populated by mimi-store.js -->
+        <div id="mimiFeaturedGrid" class="mimi-product-grid" data-limit="9"></div>
+      </div>
+    </section>
 
+    <!-- ================ SECTION 3: ARTISANAL FLAVOR ARCHITECTURE & PRICE SHEETS ================ -->
+    <section class="mimi-section mimi-section-alt">
+      <div class="mimi-container">
+        <div class="mimi-section-header mimi-section-header-row">
+          <div>
+            <div class="mimi-kicker">
+              <span>02. Bespoke Flavor Architecture</span>
+              <span class="mimi-kicker-sep" aria-hidden="true">·</span>
+              <span>4", 6", 8" &amp; 10" Tall Tiers</span>
+            </div>
+            <h2 class="mimi-section-title">Eight Signature Sponge &amp; Filling Profiles</h2>
+            <p class="mimi-section-subtitle">
+              Every Treats By Mimi cake is baked from scratch in your choice of eight house flavors, scaled from intimate 4-inch tiers (₦18,000) to grand 10-inch showstoppers (₦100,000).
+            </p>
+          </div>
+          <div>
+            <a href="menu.html" class="mimi-btn-secondary">View Complete Price List</a>
+          </div>
+        </div>
+
+        <div id="mimiFlavorGrid" class="mimi-flavor-grid"></div>
+
+        <!-- Official Studio Price List Sheets Preview -->
+        <div style="margin-top: 56px;">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 20px;">
+            <div>
+              <h3 style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 600;">Official Studio Price Sheets</h3>
+              <p style="font-size: 0.875rem; color: var(--text-secondary);">Click any menu card below to inspect full-resolution tier pricing and pastry packages.</p>
+            </div>
+            <a href="https://www.instagram.com/p/CztD2gXItpu/?img_index=1" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 600; color: var(--accent-primary);">
+              View Menu on Instagram ↗
+            </a>
+          </div>
+
+          <div class="mimi-pricelist-grid">
+            <div class="mimi-pricelist-card" onclick="window.mimiOpenPriceSheet('m1.PNG', 'Price Sheet I — Celebration Tiers')">
+              <div class="mimi-pricelist-img-wrap">
+                <img src="m1.PNG" alt="Treats By Mimi Price List Sheet 1" referrerpolicy="no-referrer" onerror="window.handleMimiImgError(this, 'Price Sheet I')" />
+              </div>
+              <div class="mimi-pricelist-caption">
+                <span>Price Sheet I</span>
+                <span>Inspect →</span>
+              </div>
+            </div>
+            <div class="mimi-pricelist-card" onclick="window.mimiOpenPriceSheet('m2.PNG', 'Price Sheet II — Custom Sizes & Flavors')">
+              <div class="mimi-pricelist-img-wrap">
+                <img src="m2.PNG" alt="Treats By Mimi Price List Sheet 2" referrerpolicy="no-referrer" onerror="window.handleMimiImgError(this, 'Price Sheet II')" />
+              </div>
+              <div class="mimi-pricelist-caption">
+                <span>Price Sheet II</span>
+                <span>Inspect →</span>
+              </div>
+            </div>
+            <div class="mimi-pricelist-card" onclick="window.mimiOpenPriceSheet('m3.PNG', 'Price Sheet III — Pastries & Treat Boxes')">
+              <div class="mimi-pricelist-img-wrap">
+                <img src="m3.PNG" alt="Treats By Mimi Price List Sheet 3" referrerpolicy="no-referrer" onerror="window.handleMimiImgError(this, 'Price Sheet III')" />
+              </div>
+              <div class="mimi-pricelist-caption">
+                <span>Price Sheet III</span>
+                <span>Inspect →</span>
+              </div>
+            </div>
+            <div class="mimi-pricelist-card" onclick="window.mimiOpenPriceSheet('m4.PNG', 'Price Sheet IV — Event Packages')">
+              <div class="mimi-pricelist-img-wrap">
+                <img src="m4.PNG" alt="Treats By Mimi Price List Sheet 4" referrerpolicy="no-referrer" onerror="window.handleMimiImgError(this, 'Price Sheet IV')" />
+              </div>
+              <div class="mimi-pricelist-caption">
+                <span>Price Sheet IV</span>
+                <span>Inspect →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================ SECTION 4: CRAFTSMANSHIP, CLIENT PROOF & WHATSAPP CONCIERGE ================ -->
+    <section class="mimi-section">
+      <div class="mimi-container">
+        <div class="mimi-section-header">
+          <div class="mimi-kicker">
+            <span>03. Client Proof &amp; Direct Concierge</span>
+            <span class="mimi-kicker-sep" aria-hidden="true">·</span>
+            <span>Trusted Across Abuja</span>
+          </div>
+          <h2 class="mimi-section-title">What Our Abuja Clients Say</h2>
+        </div>
+
+        <div class="mimi-testimonials-grid">
+          <article class="mimi-testimonial-card">
+            <p class="mimi-testimonial-quote">
+              “So in love with the cupcakes — the taste was really something to write home about. Every guest asked where we ordered from.”
+            </p>
+            <div class="mimi-testimonial-author">
+              <div class="mimi-testimonial-name">Kelly</div>
+              <div class="mimi-testimonial-context">Gourmet Cupcake Box Order · Abuja</div>
+            </div>
+          </article>
+
+          <article class="mimi-testimonial-card">
+            <p class="mimi-testimonial-quote">
+              “They really came through for my birthday party with the strawberry-covered cake. Fresh, moist crumb and delivered on time — will definitely book them again next year.”
+            </p>
+            <div class="mimi-testimonial-author">
+              <div class="mimi-testimonial-name">Anna</div>
+              <div class="mimi-testimonial-context">Custom Birthday Celebration Cake · Maitama</div>
+            </div>
+          </article>
+
+          <article class="mimi-testimonial-card">
+            <p class="mimi-testimonial-quote">
+              “My go-to cake shop in Abuja. Beyond celebration cakes, I always stop through Usuma Street for their freshly glazed donuts and rich fudge brownies.”
+            </p>
+            <div class="mimi-testimonial-author">
+              <div class="mimi-testimonial-name">Ebuka</div>
+              <div class="mimi-testimonial-context">Regular Bakery Patron · Abuja FCT</div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Direct WhatsApp & Studio Order Banner -->
+        <div style="margin-top: 48px; padding: 36px; background-color: var(--bg-surface); border: 1px solid var(--border-hairline); border-radius: var(--radius-outer); display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center;">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;">
+            <div style="max-width: 62ch;">
+              <div class="mimi-kicker" style="margin-bottom: 8px;">
+                <span>Direct Bakery Concierge</span>
+                <span class="mimi-kicker-sep" aria-hidden="true">·</span>
+                <span>+234 817 024 5555</span>
+              </div>
+              <h3 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 600; margin-bottom: 8px;">
+                Order Online or Message Us Directly on WhatsApp
+              </h3>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary);">
+                Specify your quantities, sponge flavors, custom inscriptions, and preferred pick-up time at 28 Usuma Street, Maitama or doorstep delivery anywhere in Abuja.
+              </p>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+              <a href="cart.html" class="mimi-btn-primary mimi-btn-lg">Build Your Order</a>
+              <a href="https://wa.me/c/2348170245555" target="_blank" rel="noopener noreferrer" class="mimi-btn-secondary mimi-btn-lg">
+                WhatsApp Catalog (+234 817 024 5555)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================ FOOTER ================ -->
+  <footer class="mimi-footer">
+    <div class="mimi-container">
+      <div class="mimi-footer-grid">
+        <div>
+          <a href="index.html" class="mimi-footer-brand">Treats By Mimi</a>
+          <p class="mimi-footer-desc">
+            Come visit us today and let us treat you to something sweet and special. Handcrafted celebration cakes, cupcakes, and artisanal pastries in Abuja.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="mimi-footer-heading">Navigation</h3>
+          <ul class="mimi-footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cake.html">Our Cakes</a></li>
+            <li><a href="menu.html">Menu &amp; Price List</a></li>
+            <li><a href="service.html">Catering &amp; Services</a></li>
+            <li><a href="about-us.html">About Our Bakery</a></li>
+            <li><a href="cart.html">Place Order</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mimi-footer-heading">Bakery Hours</h3>
+          <ul class="mimi-footer-links">
+            <li>Mon – Fri: 9:00 AM – 8:00 PM</li>
+            <li>Saturday: 9:00 AM – 4:00 PM</li>
+            <li>Sunday: By Pre-Booked Order</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mimi-footer-heading">Maitama Studio</h3>
+          <ul class="mimi-footer-links">
+            <li>28 Usuma Street, Maitama, Abuja FCT</li>
+            <li><a href="tel:+2348170245555">+234 817 024 5555</a></li>
+            <li><a href="mailto:Treatsbymimibakery@gmail.com">Treatsbymimibakery@gmail.com</a></li>
+            <li><a href="https://wa.me/c/2348170245555" target="_blank" rel="noopener noreferrer">Order via WhatsApp ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mimi-footer-bottom">
+        <span>© Treats By Mimi Bakery, Abuja. All rights reserved.</span>
+        <a href="cart.html" style="color: #FFFFFF; font-weight: 500;">Place an Order →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/mimi-store.js"></script>
+</body>
 </html>
