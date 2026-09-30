@@ -39,7 +39,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · 6–10" Tiers · Buttercream & Gold Leaf',
       basePrice: 53000,
-      image: '/src/assets/images/cake_divergent_couture_1790760015934.jpg',
+      image: 'img/cake-feature/c-feature-5.jpg',
       description: 'Sculptural multi-layer celebration cake finished with silky Swiss meringue buttercream and delicate artisanal detailing.'
     },
     {
@@ -49,7 +49,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Vibrant Palette · Custom Inscription',
       basePrice: 68000,
-      image: '/src/assets/images/cake_colour_bomb_1790760031830.jpg',
+      image: 'img/cake-feature/c-feature-6.jpg',
       description: 'Playful high-contrast celebration centerpiece crafted with rich sponge layers and vibrant hand-piped buttercream.'
     },
     {
@@ -59,7 +59,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Milestone Events · Maitama Favorite',
       basePrice: 68000,
-      image: '/src/assets/images/cake_royalty_tier_1790760048169.jpg',
+      image: 'img/cake-feature/c-feature-7.jpg',
       description: 'Regal tiered couture creation designed for milestone birthdays, anniversaries, and grand Abuja receptions.'
     },
     {
@@ -69,7 +69,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Silky Ganache · Custom Flavor',
       basePrice: 68000,
-      image: '/src/assets/images/cake_swiss_blue_1790760063221.jpg',
+      image: 'img/cake-feature/c-feature-8.jpg',
       description: 'Refined cerulean-toned cake layered with velvety fillings and smooth architectural frosting.'
     },
     {
@@ -109,7 +109,7 @@
       categoryLabel: 'Events Special',
       meta: 'Events Special · Hand-Textured Buttercream · Abuja Delivery',
       basePrice: 60000,
-      image: '/src/assets/images/cake_waves_textured_1790760075620.jpg',
+      image: 'img/cake-feature/c-feature-9.jpg',
       description: 'Fluid wave-textured buttercream artistry over four generous layers of freshly baked sponge.'
     },
     {
@@ -129,7 +129,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Monochrome Ivory · Petite to Grand',
       basePrice: 18000,
-      image: 'img/cake-feature/c-feature-5.jpg',
+      image: 'img/portfolio/portfolio-4.jpg',
       description: 'Crisp ivory frosted cake with delicate texture, ideal for intimate celebrations and gift deliveries.'
     },
     {
@@ -139,7 +139,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Porcelain Finish · Custom Flavor',
       basePrice: 18000,
-      image: 'img/cake-feature/c-feature-6.jpg',
+      image: 'img/portfolio/portfolio-5.jpg',
       description: 'Minimalist porcelain-white cake crafted with pure Madagascar vanilla bean and whipped buttercream.'
     },
     {
@@ -149,7 +149,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Floral & Pastel · Made to Order',
       basePrice: 18000,
-      image: 'img/cake-feature/c-feature-7.jpg',
+      image: 'img/portfolio/portfolio-6.jpg',
       description: 'Graceful pastel creation with delicate piping, baked fresh to order in our Maitama kitchen.'
     },
     {
@@ -159,7 +159,7 @@
       categoryLabel: 'Events Special',
       meta: 'Events Special · Jewel Tones · Custom Inscription',
       basePrice: 18000,
-      image: 'img/cake-feature/c-feature-8.jpg',
+      image: 'img/portfolio/portfolio-7.jpg',
       description: 'Jewel-inspired celebration cake with rich crumb structure and balanced sweetness.'
     },
     {
@@ -169,7 +169,7 @@
       categoryLabel: 'Events Special',
       meta: 'Events Special · Light & Airy · Custom Tier',
       basePrice: 18000,
-      image: 'img/cake-feature/c-feature-9.jpg',
+      image: 'img/portfolio/portfolio-8.jpg',
       description: 'Feather-light sponge paired with cloud-soft frosting for baby showers, christenings, and birthdays.'
     },
     {
@@ -209,7 +209,7 @@
       categoryLabel: 'Everyday Treats',
       meta: 'Everyday Treats · Box of 6 or 12 · Same-Day Pickup',
       basePrice: 6000,
-      image: 'img/home-slider/slider-14.jpg',
+      image: 'img/portfolio/portfolio-9.jpg',
       description: 'Freshly baked gourmet cupcakes, glazed donuts, and fudge brownies ready for afternoon indulgence.'
     }
   ];
@@ -232,7 +232,7 @@
     { id: 'showstopper', label: '10-inch Tall Couture Showstopper (40+ Guests)', priceOverride: 100000 }
   ];
 
-  var STORAGE_KEY = 'treats_by_mimi_bag_v1';
+  var STORAGE_KEY = 'treats_by_mimi_bag_v2';
 
   function formatNaira(amount) {
     return '₦' + Number(amount || 0).toLocaleString('en-NG');
@@ -523,7 +523,7 @@
       '<div class="mimi-pdp-modal" role="dialog" aria-modal="true" aria-labelledby="mimiPdpTitle">' +
         '<div class="mimi-pdp-gallery">' +
           '<div class="mimi-pdp-img-wrap">' +
-            '<img id="mimiPdpImg" src="p2.PNG" alt="Selected Cake" referrerpolicy="no-referrer" onerror="window.handleMimiImgError(this, \'Couture Cake\')" />' +
+            '<img id="mimiPdpImg" src="img/cake-feature/c-feature-5.jpg" alt="Selected Cake" referrerpolicy="no-referrer" onerror="window.handleMimiImgError(this, \'Couture Cake\')" />' +
           '</div>' +
           '<div style="margin-top: 14px; font-size: 0.75rem; color: var(--text-muted); display: flex; justify-content: space-between;">' +
             '<span>Handcrafted in Maitama, Abuja</span>' +
