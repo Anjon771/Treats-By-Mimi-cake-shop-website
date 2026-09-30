@@ -10,25 +10,118 @@
       .replace(/'/g, '&#39;');
   }
 
+  var BACKUP_CAKE_PHOTOS = [
+    'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?auto=format&fit=crop&w=900&q=80'
+  ];
+
   function createFallbackSvg(title) {
     var safeTitle = escapeHtml(title || 'Treats By Mimi');
     var svg =
       '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">' +
-      '<rect width="600" height="450" fill="#F4F3EF"/>' +
-      '<circle cx="300" cy="195" r="58" fill="#E7E5E0"/>' +
-      '<path d="M265 210h70v-22c0-10-8-18-18-18h-34c-10 0-18 8-18 18v22zm12-40c0-8 10-14 23-14s23 6 23 14" stroke="#9D174D" stroke-width="3" fill="none" stroke-linecap="round"/>' +
-      '<text x="300" y="295" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#18181B">' +
+      '<defs>' +
+      '<linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">' +
+      '<stop offset="0%" stop-color="#FDFBF7"/>' +
+      '<stop offset="100%" stop-color="#F3ECE6"/>' +
+      '</linearGradient>' +
+      '</defs>' +
+      '<rect width="600" height="450" fill="url(#bgGrad)"/>' +
+      '<ellipse cx="300" cy="310" rx="135" ry="20" fill="#E2D9D0"/>' +
+      '<rect x="195" y="210" width="210" height="95" rx="14" fill="#FFFDF9" stroke="#D6C7B8" stroke-width="2"/>' +
+      '<rect x="225" y="135" width="150" height="78" rx="12" fill="#FCE7F3" stroke="#F472B6" stroke-width="1.5"/>' +
+      '<path d="M195 235 Q220 250 245 235 T295 235 T345 235 T405 235" fill="none" stroke="#9D174D" stroke-width="3"/>' +
+      '<circle cx="265" cy="130" r="9" fill="#9D174D"/>' +
+      '<circle cx="300" cy="126" r="11" fill="#BE185D"/>' +
+      '<circle cx="335" cy="130" r="9" fill="#9D174D"/>' +
+      '<text x="300" y="365" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#18181B">' +
       safeTitle +
       '</text>' +
-      '<text x="300" y="322" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#71717A">Treats By Mimi · Maitama, Abuja</text>' +
+      '<text x="300" y="394" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#9D174D">Treats By Mimi · Handcrafted in Maitama, Abuja</text>' +
       '</svg>';
     return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
   }
 
+  function createPriceSheetSvg(sheetNum, title, subtitle, rows) {
+    var rowHtml = rows.map(function (r, i) {
+      var y = 210 + i * 74;
+      return (
+        '<rect x="48" y="' + (y - 34) + '" width="504" height="58" rx="8" fill="' + (i % 2 === 0 ? '#FFFFFF' : '#F8F6F2') + '" stroke="#E6E4DD" stroke-width="1"/>' +
+        '<text x="70" y="' + (y - 6) + '" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#18181B">' + escapeHtml(r[0]) + '</text>' +
+        '<text x="70" y="' + (y + 14) + '" font-family="sans-serif" font-size="12" fill="#71717A">' + escapeHtml(r[1]) + '</text>' +
+        '<text x="530" y="' + (y + 2) + '" text-anchor="end" font-family="monospace" font-size="17" font-weight="bold" fill="#9D174D">' + escapeHtml(r[2]) + '</text>'
+      );
+    }).join('');
+
+    var svg =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="750" viewBox="0 0 600 750">' +
+      '<rect width="600" height="750" fill="#FBFBF9"/>' +
+      '<rect x="24" y="24" width="552" height="702" rx="14" fill="#F4F3EF" stroke="#D4D2C8" stroke-width="1.5"/>' +
+      '<text x="300" y="78" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#9D174D">TREATS BY MIMI · MAITAMA, ABUJA</text>' +
+      '<text x="300" y="116" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#18181B">' + escapeHtml(title) + '</text>' +
+      '<text x="300" y="144" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#52525B">' + escapeHtml(subtitle) + '</text>' +
+      '<line x1="60" y1="162" x2="540" y2="162" stroke="#D4D2C8" stroke-width="1"/>' +
+      rowHtml +
+      '<text x="300" y="696" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#52525B">28 Usuma Street, Maitama, Abuja · WhatsApp: +234 817 024 5555</text>' +
+      '</svg>';
+    return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+  }
+
+  window.MIMI_PRICE_SHEETS = {
+    'm1.PNG': createPriceSheetSvg('I', 'Price Sheet I — Celebration Tiers', 'Single & Multi-Tier Buttercream Celebration Cakes', [
+      ['4-Inch Compact Tier', 'Serves 6–8 Guests · 3 Sponge Layers', '₦18,000'],
+      ['6-Inch Classic Tier', 'Serves 12–16 Guests · 4 Sponge Layers', '₦53,000'],
+      ['8-Inch Grand Tier', 'Serves 22–30 Guests · 4 Tall Layers', '₦68,000'],
+      ['10-Inch Couture Showstopper', 'Serves 40+ Guests · Sculpted Finish', '₦100,000'],
+      ['2-Tier Milestone Cake (6" + 8")', 'Serves 45–60 Guests · Custom Florals', '₦135,000'],
+      ['3-Tier Wedding Centerpiece', 'Bespoke Consultation & Delivery', '₦220,000+']
+    ]),
+    'm2.PNG': createPriceSheetSvg('II', 'Price Sheet II — Signature Flavors', 'Available Across All 4", 6", 8" & 10" Cake Tiers', [
+      ['Madagascar Vanilla Bean', 'Silky Swiss meringue buttercream filling', '₦18k – ₦100k'],
+      ['Classic Red Velvet', 'Tangy whipped cream cheese frosting', '₦18k – ₦100k'],
+      ['Nigerian Nutmeg Spice', 'Caramelized buttercream & warm aromatics', '₦18k – ₦100k'],
+      ['Zesty Lemon Curd', 'Bright citrus sponge & house lemon curd', '₦18k – ₦100k'],
+      ['Oreo Cookies & Cream', 'Crushed Oreo biscuit & vanilla bean cream', '₦18k – ₦100k'],
+      ['Espresso Coffee & Blueberry', 'Mocha ganache or wild berry compote', '₦18k – ₦100k']
+    ]),
+    'm3.PNG': createPriceSheetSvg('III', 'Price Sheet III — Pastries & Boxes', 'Freshly Baked Daily at 28 Usuma Street, Maitama', [
+      ['Gourmet Cupcake Box (Box of 6)', 'Assorted vanilla, red velvet & Oreo', '₦6,000'],
+      ['Celebration Cupcake Box (12)', 'Custom color palette & edible toppers', '₦12,000'],
+      ['Fudge Brownie & Blondie Box', 'Rich Belgian cocoa & sea salt caramel', '₦8,500'],
+      ['Artisanal Glazed Donuts (Box of 6)', 'Classic vanilla glaze, chocolate & berry', '₦5,500'],
+      ['Flaky Butter Croissants (4 pcs)', 'Baked fresh every morning', '₦6,500'],
+      ['Savory Quiche & Tart Platter', 'Ideal for brunch & office meetings', '₦15,000']
+    ]),
+    'm4.PNG': createPriceSheetSvg('IV', 'Price Sheet IV — Event Packages', 'Complete Dessert Tables & Celebration Bundles', [
+      ['Intimate Birthday Bundle', '6" Classic Cake + 6 Gourmet Cupcakes', '₦58,000'],
+      ['Grand Party Package', '8" Couture Cake + 12 Cupcakes + Brownies', '₦85,000'],
+      ['Holiday Festive Table', 'Festive Wreath Cake + Assorted Pastry Box', '₦75,000'],
+      ['Corporate Milestone Platter', 'Branded 8" Cake + 24 Mini Pastries', '₦92,000'],
+      ['Bridal Shower Sweet Table', 'Tiered Cake + 24 Cupcakes + Dessert Cups', '₦145,000'],
+      ['Abuja Doorstep Delivery', 'Air-conditioned dispatch across FCT', '₦3,500']
+    ])
+  };
+
   window.handleMimiImgError = function (imgEl, title) {
-    if (!imgEl || imgEl.dataset.fallbackApplied === 'true') return;
-    imgEl.dataset.fallbackApplied = 'true';
-    imgEl.src = createFallbackSvg(title || imgEl.alt || 'Artisanal Cake');
+    if (!imgEl) return;
+    var step = parseInt(imgEl.dataset.fallbackStep || '0', 10);
+    if (step === 0) {
+      imgEl.dataset.fallbackStep = '1';
+      var hash = 0;
+      var str = String(title || imgEl.alt || 'cake');
+      for (var i = 0; i < str.length; i++) {
+        hash = (hash + str.charCodeAt(i)) % BACKUP_CAKE_PHOTOS.length;
+      }
+      imgEl.src = BACKUP_CAKE_PHOTOS[hash];
+      return;
+    }
+    if (step === 1) {
+      imgEl.dataset.fallbackStep = '2';
+      imgEl.src = createFallbackSvg(title || imgEl.alt || 'Artisanal Cake');
+    }
   };
 
   var PRODUCTS = [
@@ -39,7 +132,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · 6–10" Tiers · Buttercream & Gold Leaf',
       basePrice: 53000,
-      image: 'img/cake-feature/c-feature-5.jpg',
+      image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80',
       description: 'Sculptural multi-layer celebration cake finished with silky Swiss meringue buttercream and delicate artisanal detailing.'
     },
     {
@@ -49,7 +142,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Vibrant Palette · Custom Inscription',
       basePrice: 68000,
-      image: 'img/cake-feature/c-feature-6.jpg',
+      image: 'https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?auto=format&fit=crop&w=900&q=80',
       description: 'Playful high-contrast celebration centerpiece crafted with rich sponge layers and vibrant hand-piped buttercream.'
     },
     {
@@ -59,7 +152,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Milestone Events · Maitama Favorite',
       basePrice: 68000,
-      image: 'img/cake-feature/c-feature-7.jpg',
+      image: 'https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=900&q=80',
       description: 'Regal tiered couture creation designed for milestone birthdays, anniversaries, and grand Abuja receptions.'
     },
     {
@@ -69,7 +162,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Silky Ganache · Custom Flavor',
       basePrice: 68000,
-      image: 'img/cake-feature/c-feature-8.jpg',
+      image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=900&q=80',
       description: 'Refined cerulean-toned cake layered with velvety fillings and smooth architectural frosting.'
     },
     {
@@ -79,7 +172,7 @@
       categoryLabel: 'Events Special',
       meta: 'Events Special · Evening Celebrations · Deep Indigo Finish',
       basePrice: 53000,
-      image: 'img/cake-feature/c-feature-1.jpg',
+      image: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=900&q=80',
       description: 'Dramatic midnight-hued celebration cake balanced with light, aromatic sponge and whipped cream cheese filling.'
     },
     {
@@ -89,7 +182,7 @@
       categoryLabel: 'Events Special',
       meta: 'Events Special · Warm Metallic Accents · 6–10" Tiers',
       basePrice: 53000,
-      image: 'img/cake-feature/c-feature-2.jpg',
+      image: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=900&q=80',
       description: 'Sunlit warm-toned couture cake adorned with golden confectioner accents for unforgettable gatherings.'
     },
     {
@@ -99,7 +192,7 @@
       categoryLabel: 'Events Special',
       meta: 'Events Special · Minimalist Finish · Custom Flavor',
       basePrice: 53000,
-      image: 'img/cake-feature/c-feature-3.jpg',
+      image: 'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=900&q=80',
       description: 'Timeless contemporary cake design combining understated elegance with deeply indulgent sponge layers.'
     },
     {
@@ -109,7 +202,7 @@
       categoryLabel: 'Events Special',
       meta: 'Events Special · Hand-Textured Buttercream · Abuja Delivery',
       basePrice: 60000,
-      image: 'img/cake-feature/c-feature-9.jpg',
+      image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=80',
       description: 'Fluid wave-textured buttercream artistry over four generous layers of freshly baked sponge.'
     },
     {
@@ -119,7 +212,7 @@
       categoryLabel: 'Events Special',
       meta: 'Events Special · Bespoke Palette · Handcrafted',
       basePrice: 57000,
-      image: 'img/cake-feature/c-feature-4.jpg',
+      image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=80',
       description: 'Soft tonal blue confection tailored for birthdays, bridal showers, and intimate family milestones.'
     },
     {
@@ -129,7 +222,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Monochrome Ivory · Petite to Grand',
       basePrice: 18000,
-      image: 'img/portfolio/portfolio-4.jpg',
+      image: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?auto=format&fit=crop&w=900&q=80',
       description: 'Crisp ivory frosted cake with delicate texture, ideal for intimate celebrations and gift deliveries.'
     },
     {
@@ -139,7 +232,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Porcelain Finish · Custom Flavor',
       basePrice: 18000,
-      image: 'img/portfolio/portfolio-5.jpg',
+      image: 'https://images.unsplash.com/photo-1562440499-64c9a111f713?auto=format&fit=crop&w=900&q=80',
       description: 'Minimalist porcelain-white cake crafted with pure Madagascar vanilla bean and whipped buttercream.'
     },
     {
@@ -149,7 +242,7 @@
       categoryLabel: 'Signature Couture',
       meta: 'Signature Couture · Floral & Pastel · Made to Order',
       basePrice: 18000,
-      image: 'img/portfolio/portfolio-6.jpg',
+      image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=900&q=80',
       description: 'Graceful pastel creation with delicate piping, baked fresh to order in our Maitama kitchen.'
     },
     {
@@ -159,7 +252,7 @@
       categoryLabel: 'Events Special',
       meta: 'Events Special · Jewel Tones · Custom Inscription',
       basePrice: 18000,
-      image: 'img/portfolio/portfolio-7.jpg',
+      image: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=900&q=80',
       description: 'Jewel-inspired celebration cake with rich crumb structure and balanced sweetness.'
     },
     {
@@ -169,7 +262,7 @@
       categoryLabel: 'Events Special',
       meta: 'Events Special · Light & Airy · Custom Tier',
       basePrice: 18000,
-      image: 'img/portfolio/portfolio-8.jpg',
+      image: 'https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=900&q=80',
       description: 'Feather-light sponge paired with cloud-soft frosting for baby showers, christenings, and birthdays.'
     },
     {
@@ -179,7 +272,7 @@
       categoryLabel: 'Holiday Collection',
       meta: 'Holiday Collection · Spiced & Classic Flavors · Seasonal',
       basePrice: 67000,
-      image: 'img/portfolio/portfolio-1.jpg',
+      image: 'https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=900&q=80',
       description: 'Signature Christmas-themed flavored cake adorned with festive botanical piping and warm holiday aromatics.'
     },
     {
@@ -189,7 +282,7 @@
       categoryLabel: 'Holiday Collection',
       meta: 'Holiday Collection · Family Gathering · Maitama Bakery',
       basePrice: 80000,
-      image: 'img/portfolio/portfolio-2.jpg',
+      image: 'https://images.unsplash.com/photo-1514517604298-cf80e0fb7f1e?auto=format&fit=crop&w=900&q=80',
       description: 'Rich holiday centerpiece designed for end-of-year corporate galas and family Christmas tables.'
     },
     {
@@ -199,7 +292,7 @@
       categoryLabel: 'Holiday Collection',
       meta: 'Holiday Collection · Bespoke Multi-Tier · Limited Run',
       basePrice: 73000,
-      image: 'img/portfolio/portfolio-3.jpg',
+      image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=900&q=80',
       description: 'Showstopping seasonal cake crafted with premium locally sourced ingredients and festive artistry.'
     },
     {
@@ -209,7 +302,7 @@
       categoryLabel: 'Everyday Treats',
       meta: 'Everyday Treats · Box of 6 or 12 · Same-Day Pickup',
       basePrice: 6000,
-      image: 'img/portfolio/portfolio-9.jpg',
+      image: 'https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80',
       description: 'Freshly baked gourmet cupcakes, glazed donuts, and fudge brownies ready for afternoon indulgence.'
     }
   ];
@@ -241,7 +334,16 @@
   function loadBag() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? JSON.parse(raw) : [];
+      var parsed = raw ? JSON.parse(raw) : [];
+      return parsed.map(function (item) {
+        var prod = PRODUCTS.find(function (p) {
+          return p.id === item.productId;
+        });
+        if (prod) {
+          item.image = prod.image;
+        }
+        return item;
+      });
     } catch (e) {
       return [];
     }
@@ -378,7 +480,7 @@
     return (
       '<article class="mimi-product-card" data-category="' + p.category + '">' +
         '<div class="mimi-card-media" onclick="window.mimiOpenConfigurator(\'' + p.id + '\')">' +
-          '<img src="' + p.image + '" alt="' + escapeHtml(p.name) + '" referrerpolicy="no-referrer" loading="lazy" onerror="window.handleMimiImgError(this, \'' + escapeHtml(p.name) + '\')" />' +
+          '<img src="' + p.image + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="window.handleMimiImgError(this, \'' + escapeHtml(p.name) + '\')" />' +
         '</div>' +
         '<div class="mimi-card-body">' +
           '<div class="mimi-card-meta">' + escapeHtml(p.meta) + '</div>' +
@@ -479,7 +581,7 @@
     var heroCustomizeBtn = document.getElementById('mimiHeroCustomizeBtn');
 
     if (mainImg) {
-      mainImg.dataset.fallbackApplied = 'false';
+      mainImg.dataset.fallbackStep = '0';
       mainImg.src = product.image;
       mainImg.alt = product.name;
     }
@@ -523,7 +625,7 @@
       '<div class="mimi-pdp-modal" role="dialog" aria-modal="true" aria-labelledby="mimiPdpTitle">' +
         '<div class="mimi-pdp-gallery">' +
           '<div class="mimi-pdp-img-wrap">' +
-            '<img id="mimiPdpImg" src="img/cake-feature/c-feature-5.jpg" alt="Selected Cake" referrerpolicy="no-referrer" onerror="window.handleMimiImgError(this, \'Couture Cake\')" />' +
+            '<img id="mimiPdpImg" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80" alt="Selected Cake" onerror="window.handleMimiImgError(this, \'Couture Cake\')" />' +
           '</div>' +
           '<div style="margin-top: 14px; font-size: 0.75rem; color: var(--text-muted); display: flex; justify-content: space-between;">' +
             '<span>Handcrafted in Maitama, Abuja</span>' +
@@ -610,7 +712,7 @@
     }) || PRODUCTS[0];
 
     var img = document.getElementById('mimiPdpImg');
-    img.dataset.fallbackApplied = 'false';
+    img.dataset.fallbackStep = '0';
     img.src = activeConfigProduct.image;
     img.alt = activeConfigProduct.name;
 
@@ -663,7 +765,8 @@
       document.body.appendChild(existing);
     }
     document.getElementById('mimiSheetModalTitle').textContent = title || 'Official Price Sheet';
-    document.getElementById('mimiSheetModalImg').src = imgSrc;
+    var resolvedSheet = (window.MIMI_PRICE_SHEETS && window.MIMI_PRICE_SHEETS[imgSrc]) || imgSrc;
+    document.getElementById('mimiSheetModalImg').src = resolvedSheet;
     existing.classList.add('open');
   };
 
@@ -1007,6 +1110,15 @@
   // INITIALIZE ON DOM READY
   // ==========================================================================
   document.addEventListener('DOMContentLoaded', function () {
+    // Hydrate price sheet images so they never depend on binary files on GitHub
+    var sheetImgs = document.querySelectorAll('img[data-price-sheet]');
+    sheetImgs.forEach(function (img) {
+      var key = img.getAttribute('data-price-sheet');
+      if (window.MIMI_PRICE_SHEETS && window.MIMI_PRICE_SHEETS[key]) {
+        img.src = window.MIMI_PRICE_SHEETS[key];
+      }
+    });
+
     updateBagBadges();
     renderProductGrids();
     renderFlavorList();
